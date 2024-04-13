@@ -1,0 +1,16 @@
+@* @model IEnumerable<Class> *@
+@model IEnumerable<ClassView>
+    
+<div>Avarage: @ViewBag.Average</div>
+
+@foreach(var item in Model){
+    <div class="card mb-2">
+        <div class="card-header">
+            <div class="card-title">@item.ClassId - <a href="/home/class/@item.ClassId">@item.ClassName</a></div>
+        </div>
+        <div class="card-footer">
+            @item.Average
+        </div>
+    </div>
+}
+<script>$($('.navbar-nav .nav-item .nav-link')[0]).addClass('active');</script>

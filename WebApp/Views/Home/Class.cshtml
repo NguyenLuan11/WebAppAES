@@ -1,0 +1,42 @@
+@* @model ClassView *@
+@model IEnumerable<StudentView>
+@if(Model != null){
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">@Model.First().ClassId - @Model.First().ClassName</div>
+        </div>
+        <div class="card-body">
+            <table class="table table-borderd">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @* @foreach(var o in Model.StudentViews){ *@
+                    @foreach(var o in Model){
+                        <tr>
+                            <td>@o.StudentId</td>
+                            <td>@o.FirstName</td>
+                            <td>@o.LastName</td>
+                            <td>@o.Email</td>
+                            <td>@o.Gender</td>
+                            <td>@o.Score</td>
+                        </tr>
+                    }
+                </tbody>
+                @* <tfoot>
+                    <tr>
+                        <td colspan="5">Avarage</td>
+                        <td>@Model.Average</td>
+                    </tr>
+                </tfoot> *@
+            </table>
+        </div>
+    </div>
+}

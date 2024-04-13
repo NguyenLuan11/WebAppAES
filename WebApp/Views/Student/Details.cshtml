@@ -1,0 +1,29 @@
+@* @model Student *@
+@model StudentView
+<table>
+    <tr>
+        <th>Id</th>
+        <td>@Model.StudentId</td>
+    </tr>
+    <tr>
+        <th>Firstname</th>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <th>Lastname</th>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <th>Gender</th>
+        <td>@Model.Gender</td>
+    </tr>
+    <tr>
+        <th>Id</th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <th>Score</th>
+        <td>@Model.Score</td>
+    </tr>
+</table>
+<a class="btn btn-outline-primary" href="/student">Back</a>

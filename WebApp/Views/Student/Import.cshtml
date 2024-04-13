@@ -1,0 +1,17 @@
+<form enctype="multipart/form-data" method="post">
+    <div class="row mb-1">
+        <label class="form-label col-2" for="f">Excel</label>
+        <div class="col-10">
+            <input class="form-control" type="file" name="f" id="f" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+        </div>
+    </div>
+    <div class="row mb-1">
+        <label class="form-label col-2" for="classId">Class</label>
+        <div class="col-10">
+            <select class="form-select" id="classId" name="classId" asp-items="@ViewBag.Classes"></select>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-primary">Import</button>
+    </div>
+</form>
